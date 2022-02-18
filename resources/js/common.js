@@ -133,7 +133,7 @@ $(function() {
     //////////// swiper 매거진 
 
     // 썸네일 슬라이드
-    new Swiper('.slider_magazine', {
+    var mainmagazine = new Swiper('.slider_magazine', {
         simulateTouch: true,
 				slidesPerView: 1,
 				loop: true,
@@ -151,18 +151,18 @@ $(function() {
 					el: ".slider_magazine .swiper-pagination",
 					type: "progressbar"
 				},
-				on: {
-					beforeInit: function () {
-						var slideCnt = this.wrapperEl.querySelectorAll(".slider_magazine .swiper-container .swiper-slide").length;			
-						$('.slider_magazine').find('.all_num').text(slideCnt);
-					},
-					activeIndexChange : function() {
-						$('.magTabSwiper').find('.tab').removeClass('active');
-						$('.magTabSwiper').find('.tab').eq(this.realIndex).addClass('active');
-						magTabSwiper.slideToLoop(this.realIndex);
-						$('.slider_magazine').find('.active_num').text(this.realIndex + 1);
-					},
-				}
+				// on: {
+				// 	beforeInit: function () {
+				// 		var slideCnt = this.wrapperEl.querySelectorAll(".slider_magazine .swiper-container .swiper-slide").length;			
+				// 		$('.slider_magazine').find('.all_num').text(slideCnt);
+				// 	},
+				// 	activeIndexChange : function() {
+				// 		$('.magTabSwiper').find('.tab').removeClass('active');
+				// 		$('.magTabSwiper').find('.tab').eq(this.realIndex).addClass('active');
+				// 		magTabSwiper.slideToLoop(this.realIndex);
+				// 		$('.slider_magazine').find('.active_num').text(this.realIndex + 1);
+				// 	},
+				// }
     }); 
  
 });
