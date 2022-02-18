@@ -90,18 +90,19 @@ function gnbMenu(depth1, depth2, depth3) {
 }
 
 
-//////////// swiper 메인비주얼 ////////////
+
 $(function() {
-    var mainslider = new Swiper('.slider_visual', {
+
+    //////////// swiper 메인비주얼
+    var mainvisual = new Swiper('.slider_visual', {
+        effect: "fade",
+        allowTouchMove : true,
+        loop: true,
         speed: 1000,
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
         },
-        effect: "fade",
-        allowTouchMove : true,
-        loop: true,
-
         pagination: {
             el: '.slider_visual .swiper-pagination',
             type: 'bullets',
@@ -116,17 +117,52 @@ $(function() {
         },
         on: {
             init: function () {
-            $(".slider_visual .swiper-scrollbar .swiper-scrollbar-drag").removeClass("animate");
-            $(".slider_visual .swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
+              $(".slider_visual .swiper-scrollbar .swiper-scrollbar-drag").removeClass("animate");
+              $(".slider_visual .swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
             },
             slideChangeTransitionStart: function () {
-            $(".slider_visual .swiper-scrollbar .swiper-scrollbar-drag").removeClass("animate");
+              $(".slider_visual .swiper-scrollbar .swiper-scrollbar-drag").removeClass("animate");
             },
             slideChangeTransitionEnd: function () {
-            $(".slider_visual .swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
+              $(".slider_visual .swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
             }
         },
     }); 
-    $(".swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
+    $(".slider_visual .swiper-scrollbar .swiper-scrollbar-drag").eq(0).addClass("animate");
+
+    //////////// swiper 매거진 
+
+    // 썸네일 슬라이드
+    new Swiper('.slider_magazine', {
+        simulateTouch: true,
+				slidesPerView: 1,
+				loop: true,
+				loopAdditionalSlides: 2,
+				autoplay: {
+					delay: 3000,
+					disableOnInteraction: false,
+				},
+				spaceBetween: 30,
+				navigation: {
+					nextEl: '.slider_magazine .swiper-button-next',
+					prevEl: '.slider_magazine .swiper-button-prev',
+				},
+				pagination: {
+					el: ".slider_magazine .swiper-pagination",
+					type: "progressbar"
+				},
+				on: {
+					beforeInit: function () {
+						var slideCnt = this.wrapperEl.querySelectorAll(".slider_magazine .swiper-container .swiper-slide").length;			
+						$('.slider_magazine').find('.all_num').text(slideCnt);
+					},
+					activeIndexChange : function() {
+						$('.magTabSwiper').find('.tab').removeClass('active');
+						$('.magTabSwiper').find('.tab').eq(this.realIndex).addClass('active');
+						magTabSwiper.slideToLoop(this.realIndex);
+						$('.slider_magazine').find('.active_num').text(this.realIndex + 1);
+					},
+				}
+    }); 
  
 });
