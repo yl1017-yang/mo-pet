@@ -8,7 +8,7 @@
 <meta name="format-detection" content="telephone=no">
 <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
 <title>mobile</title>
-
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./resources/css/common.css">
 <link rel="stylesheet" href="./resources/css/layout.css">
 <link rel="stylesheet" href="./resources/css/main.css">
@@ -18,23 +18,30 @@
 <!-- 스와이퍼 4.5.1 -->
 <link rel="stylesheet" href="./resources/css/swiper.min.css">
 <script src="./resources/js/swiper.min.js"></script>
-
-<script type="text/javascript">
-    $(function() {
-        gnbMenu(6,0,0); //초기번호 0
-    });
-</script>
 </head>
 <body>
 
 <div class="wrap">
     <!-- 상단 -->
     <header class="header">
+        <nav class="gnb">
+            <div class="alert">
+                <img src="./images/main/icon_alert.png" alt="" />
+            </div>
+            <div class="location">
+                <span class="loca_map"><img src="./images/main/icon_map.png" alt="" /></span>
+                <span class="loca_tit">강남구 역삼동</span>
+                <span class="loca_arrow"><img src="./images/main/icon_arrow.png" alt="" /></span>
+            </div>
+            <div class="search">
+                <img src="./images/main/icon_search.png" alt="" />
+            </div>
+        </nav>
         <!-- 전체메뉴 오픈 -->
-        <button class="moBtnOpen" title="네비게이션 열기">
+        <!-- <button class="moBtnOpen" title="네비게이션 열기">
             <span class="blind">전체메뉴보기</span>
             <span class="bar1"></span><span class="bar2"></span><span class="bar3"></span>
-        </button>
+        </button> -->
         <!-- 모바일 전체메뉴 -->
         <div class="moGnbWrap">
             <div class="moGnbBg"></div>
@@ -104,96 +111,143 @@
 
     <!-- 본문내용 -->
     <div class="container">
-
-        <!------------ 메인비주얼 ------------>
-        <section class="swiper-container slider_visual">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <div class="visual_text">
-                        <p class="title">펫미와 함게 건강한<br>반려라이프를 함께해요!</p>
-                        <p class="desc">선착순 30% 할인쿠폰 받기</p>
+        <div class="main">
+            <!------------ 메인비주얼 ------------>
+            <section class="swiper-container slider_visual">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="visual_text">
+                            <p class="title">펫미와 함께 건강한<br>반려라이프를 함께해요!</p>
+                            <p class="desc">선착순 30% 할인쿠폰 받기</p>
+                        </div>
+                        <figure>
+                            <img src="./images/main/img_visual_01.png" alt="" />
+                        </figure>
                     </div>
-                    <figure>
-                        <img src="https://i.ibb.co/92rG5SH/ts4.jpg" />
-                    </figure>
-                </div>
-                <div class="swiper-slide">
-                    <div class="visual_text">
-                        <p class="title">반려견 마을과<br>반려라이프를 함께해요!</p>
-                        <p class="desc">선착순 30% 할인쿠폰 받기</p>
+                    <div class="swiper-slide">
+                        <div class="visual_text">
+                            <p class="title">반려견 마을과<br>반려라이프를 함께해요!</p>
+                            <p class="desc">선착순 30% 할인쿠폰 받기</p>
+                        </div>
+                        <figure>
+                            <img src="./images/main/img_visual_02.png" alt="" />
+                        </figure>
                     </div>
-                    <figure>
-                        <img src="https://i.ibb.co/9TXDX3G/ol2.jpg" />
-                    </figure>
-                </div>
-                <div class="swiper-slide">
-                    <div class="visual_text">
-                        <p class="title">애견 미용실<br>반려라이프를 함께해요!</p>
-                        <p class="desc">https://www.h-point.co.kr/cu/main/index.nhd</p>
+                    <div class="swiper-slide">
+                        <div class="visual_text">
+                            <p class="title">펫미와 함께 건강한<br>반려라이프를 함께해요!</p>
+                            <p class="desc">선착순 30% 할인쿠폰 받기</p>
+                        </div>
+                        <figure>
+                            <img src="./images/main/img_visual_03.png" alt="" />
+                        </figure>
                     </div>
-                    <figure>
-                        <img src="https://www.poscochemical.com/resources/images/main/main_visual_bg02.jpg" />
-                    </figure>
                 </div>
-            </div>
-            
-            <div class="util_box">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
                 <div class="swiper-pagination"></div>
-            </div>
-        </section>
-        <!------------ //메인비주얼 ------------>
+            </section>
+            <!------------ //메인비주얼 ------------>
 
-        <!------------ 매거진 ------------>
-        <!-- 썸네일 -->
-        <section class="swiper-container slider_magazine">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <a href="#">
-                        <figure class="thumbnail">
-                            <img src="https://i.ibb.co/92rG5SH/ts4.jpg" />
-                        </figure>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <figure class="thumbnail">
-                            <img src="https://i.ibb.co/92rG5SH/ts4.jpg" />
-                        </figure>
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="#">
-                        <figure class="thumbnail">
-                            <img src="https://i.ibb.co/92rG5SH/ts4.jpg" />
-                        </figure>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="util_box">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-pagination"></div>
-            </div>
-        </section>
-        <!-- //매거진 -->
+            <!------------ 메인퀵메뉴 ------------>
+            <section class="main_section_quickmenu">
+                <ul class="quickmenu_wrap">
+                    <li>
+                        <a href="#">
+                            <img src="./images/main/img_quickmenu_01.png" alt="" />
+                            <p>반려견미용</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/main/img_quickmenu_02.png" alt="" />
+                            <p>반려묘미용</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/main/img_quickmenu_03.png" alt="" />
+                            <p>호텔</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="./images/main/img_quickmenu_04.png" alt="" />
+                            <p>유치원</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!------------ //메인퀵메뉴 ------------>
 
-        <section class="content">
-            <div style="margin-top:150px;display:flex;justify-content:space-between;">
-                <div style="background-color: aqua;padding:20px;display:flex;">
-                    배경
+            <!------------ 최근본매장 ------------>
+            <section class="main_section_store">
+                <div class="inner">
+                    <div class="sect_title">
+                        <h2>최근 본 매장</h2>
+                    </div>
+                    <div class="swiper-container slider_store">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <figure class="img">
+                                        <img src="./images/main/img_mainstore_01.png" alt="" />
+                                    </figure>
+                                    <p class="title">독살롱다음애견..</p>
+                                    <p class="desc">서울 강서구</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <figure class="img">
+                                        <img src="./images/main/img_mainstore_02.png" alt="" />
+                                    </figure>
+                                    <p class="title">독살롱다음애견..</p>
+                                    <p class="desc">서울 강서구</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <figure class="img">
+                                        <img src="./images/main/img_mainstore_03.png" alt="" />
+                                    </figure>
+                                    <p class="title">독살롱다음애견..</p>
+                                    <p class="desc">서울 강서구</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <figure class="img">
+                                        <img src="./images/main/img_mainstore_04.png" alt="" />
+                                    </figure>
+                                    <p class="title">독살롱다음애견..</p>
+                                    <p class="desc">서울 강서구</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <figure class="img">
+                                        <img src="./images/main/img_mainstore_05.png" alt="" />
+                                    </figure>
+                                    <p class="title">독살롱다음애견..</p>
+                                    <p class="desc">서울 강서구</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <figure class="img">
+                                        <img src="./images/main/img_mainstore_06.png" alt="" />
+                                    </figure>
+                                    <p class="title">독살롱다음애견..</p>
+                                    <p class="desc">서울 강서구</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div style="background-color:bisque;padding:20px;">
-                    배경
-                </div>
-                <div style="background-color:brown;padding:20px;">
-                    배경
-                </div>
-            </div>
-        </section>
+            </section>
+            <!-- //최근본매장 -->
 
+
+        </div>
     </div>
     <!-- //본문내용 -->
 
