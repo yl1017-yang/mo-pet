@@ -137,18 +137,18 @@ footer{padding:100px;height:100px;display:flex;justify-content:center;align-item
     z-index:10;
 }
 .slider_visual .swiper-pagination:before {
-    position:absolute;top:-1.7vw;left:-3.5vw;width:13vw;height:7.2vw;background:rgba(0, 0, 0, .3);border-radius:20px;content:'';z-index:-1;
+    position:absolute;top:-1.6vw;left:-3.5vw;width:13vw;height:7.2vw;background:rgba(0, 0, 0, .3);border-radius:20px;content:'';z-index:-1;
 }
 
 /****************** 상단퀵메뉴 ******************/
 .main_section_quickmenu{position:absolute;top:71.533vw;left:6.4vw;right:6.4vw;z-index:50;background:rgba(255, 255, 255, .25);border-radius:8px;box-shadow:0px 5px 10px 0px rgba(0,0,0,0.08);}
-.main_section_quickmenu:after{position:absolute;width:90%;height:90%;top:0;left:0;right:0;bottom:0;background:rgba(255, 255, 255, .8);filter:blur(95px);z-index: -1;content:"";}
+.main_section_quickmenu:after{position:absolute;width:90%;height:90%;top:0;left:0;right:0;bottom:0;background:rgba(255, 255, 255, .8);filter:blur(95px);z-index:-1;content:"";}
 .main_section_quickmenu .quickmenu_wrap{display:flex;justify-content:space-between;margin:5.333vw 4.8vw;}
 .main_section_quickmenu .quickmenu_wrap li{width:21%;}
 .main_section_quickmenu .quickmenu_wrap li p{font-size:3.2vw;margin-top:2.5vw;text-align:center;}
 
 /****************** 최근본매장 ******************/
-.main_section_store {background:#F0F0F0;padding:38.4vw 0 16vw 0;}
+.main_section_store{background:#F0F0F0;padding:38.4vw 0 16vw 0;}
 .main_section_store .slider_store{
     position: relative;
     width:100%;
@@ -156,16 +156,19 @@ footer{padding:100px;height:100px;display:flex;justify-content:center;align-item
 } 
 .slider_store .swiper-slide {
     position:relative;
-    box-sizing:border-box;
     display:flex;
-    border:1px solid red
+} 
+.slider_store .swiper-slide.ml{
+    margin-left:6.4vw;
 } 
 .slider_store .swiper-slide a {
-    /* display: block;
-    width: 100%; */
+    display: block;
+    width: 100%;
 }
 .slider_store .swiper-slide .img {
-    
+    width:100%;
+    border-radius:8px;
+    overflow:hidden;
 }
 .slider_store .swiper-slide .img img {
     
@@ -181,6 +184,80 @@ footer{padding:100px;height:100px;display:flex;justify-content:center;align-item
     color:#666;
 } 
 
+/****************** 프리미엄샵 ******************/
+.main_section_premium{background:rgba(255, 193, 7, .10);padding:13.333vw 0;}
+.main_section_premium .slider_premium{
+    position: relative;
+    width:100%;
+    padding-bottom:11vw;
+    display: flex;
+} 
+.slider_premium .swiper-slide {
+    position:relative;
+    display:flex;
+    justify-content: center;
+} 
+.slider_premium .swiper-slide a {
+    display: block;
+    width: 100%;
+    background:#fff;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0px 5px 10px 0px rgba(0,0,0,0.08);
+}
+.slider_premium .swiper-slide .img {
+    position:relative;
+    width:100%;
+}
+.slider_premium .swiper-slide .img .text {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:rgba(0, 0, 0, .15);
+    padding:2.5vw 5.333vw 2vw 5.333vw;
+    font-size:3.733vw;
+    color:#fff;
+} 
+.slider_premium .swiper-slide .text_wrap {
+    padding:5.333vw;
+}
+.slider_premium .swiper-slide .text_wrap .title {
+    font-size:4.8vw;
+    font-weight:700;
+    color:#1A1A1A;
+    min-height:15vw;
+}
+.slider_premium .swiper-slide .text_wrap .desc {
+    font-size:3.733vw;
+    color:#666;
+    margin:1vw 0 1.6vw 0;
+} 
+.slider_premium .swiper-slide .text_wrap .rate {
+    position:relative;
+    font-size:3.733vw;
+    font-weight:600;
+    color:#666;
+    padding-left:5.5vw;
+} 
+.slider_premium .swiper-slide .text_wrap .rate:before {
+    position:absolute;top:0;left:0;width:4.8vw;height:4.8vw;background:url("/images/main/icon_star.png");background-size:cover;content:'';
+}
+.slider_premium .swiper-slide .text_wrap .rate span {
+    color:#333;
+}
+.slider_premium .swiper-pagination {
+    width:100%;
+    height:6%;
+    bottom:0;
+    color:#000;
+    font-size:3.733vw;
+    font-weight:600;
+    letter-spacing:1vw;
+}
+
+/****************** 우리동네 매장 ******************/
+.main_section_local{background:#fff;padding:13.333vw 0;}
 
 
 /****************** media ******************/

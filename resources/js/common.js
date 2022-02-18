@@ -76,18 +76,16 @@ $(function() {
     });
 });
 
-
-
 $(function() {
 
     //////////// 메인비주얼
-    var mainvisual = new Swiper('.slider_visual', {
+    new Swiper('.slider_visual', {
         effect: "fade",
         allowTouchMove : true,
         loop: true,
         speed: 1000,
         autoplay: {
-            delay: 5000,
+            delay: 4000,
             disableOnInteraction: false,
         },
         pagination: {
@@ -98,18 +96,32 @@ $(function() {
     }); 
 
     //////////// 최근본매장 
-    var mainmagazine = new Swiper('.slider_store', {
-				slidesPerView: 1,
-        // spaceBetween: 12,
-        loop: true,
-				// loopAdditionalSlides: 3,
-				// observer: true,
-				// observeParents: true,
-				//freeMode: true,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
+    new Swiper('.slider_store', {
+				slidesPerView: 2.5,
+        spaceBetween: 12,
+        nested :true,
+        // loop: true,
+        // autoplay: {
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // },
     }); 
+
+    //////////// 프리미엄샵 
+    new Swiper('.slider_premium', {
+      slidesPerView: 1.5,
+      spaceBetween: 24,
+      //loop: true,
+      speed: 800,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.slider_premium .swiper-pagination',      
+        type: 'fraction',
+        clickable : true,
+      },
+  }); 
  
 });
