@@ -3,10 +3,10 @@
 /****************** Layout ******************/
 html{font-size:16px;}
 body{min-height:100%;overflow-y:scroll;}
-.wrap{width:100%;min-width:320px;max-width:768px}
+.wrap{width:100%;min-width:320px;}
 
 /****************** Header & GNB ******************/
-.header{position:absolute;top:0;left:0;width:100%;z-index:999;}
+.header{position:fixed;top:0;left:0;width:100%;z-index:999;}
 .header .gnb{display:flex;justify-content:space-between;margin:4vw 6.4vw 0 6.4vw;}
 .header .gnb .alert{width:7.467vw;}
 .header .gnb .location{margin-top:1vw;}
@@ -241,7 +241,7 @@ footer{padding:100px;height:100px;display:flex;justify-content:center;align-item
     padding-left:5.5vw;
 } 
 .slider_premium .swiper-slide .text_wrap .rate:before {
-    position:absolute;top:0;left:0;width:4.8vw;height:4.8vw;background:url("/images/main/icon_star.png");background-size:cover;content:'';
+    position:absolute;top:0;left:0;width:4.8vw;height:4.8vw;background:url("../../images/main/icon_star.png");background-size:cover;content:'';
 }
 .slider_premium .swiper-slide .text_wrap .rate span {
     color:#333;
