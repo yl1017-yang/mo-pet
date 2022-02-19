@@ -108,7 +108,6 @@ select:focus:-ms-input-placeholder,
 textarea:focus:-ms-input-placeholder {color:#222; opacity:0;} */
 
 
-
 /****************** media ******************/
 @media screen and (max-width: 1366px){
 
