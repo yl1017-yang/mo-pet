@@ -17,7 +17,6 @@ $(function() {
 
       $(this).hide();
       $moGnbWrap.fadeIn(200);
-      //$moGnbWrap.find(".scroll").stop().animate({right:0}, 300);
       $moGnbWrap.find(".scroll").addClass("open");
       $moGnbBg.fadeIn();
       $("body").css({'height':$(window).height(), 'overflow':'hidden'});
@@ -29,7 +28,6 @@ $(function() {
       
       $moBtnOpen.show();
       $moGnbWrap.fadeOut(200);
-      //$moGnbWrap.find(".scroll").stop().animate({right:-100}, 300);
       $moGnbWrap.find(".scroll").removeClass("open");
       $moGnbBg.hide();
       $("body").css({'height':'auto', 'overflow':'auto'});
@@ -40,7 +38,6 @@ $(function() {
       
       $moBtnOpen.show();
       $moGnbWrap.fadeOut(200);
-      //$moGnbWrap.find(".scroll").animate({right:0}, 300);
       $moGnbWrap.find(".scroll").removeClass("open");
     });
 
@@ -55,7 +52,6 @@ $(function() {
             $depth.slideUp(300);
         } else {
           $moGnbLi.children("a").removeClass("on");
-            //$moGnb.find("li > a").removeClass("on");
             $(this).parent().siblings().find("ul").slideUp(300);
             $(this).addClass("on");
             $depth.slideDown(300);
@@ -78,7 +74,7 @@ $(function() {
 
 $(function() {
 
-    //////////// 메인비주얼
+    // 메인비주얼
     new Swiper('.slider_visual', {
         effect: "fade",
         allowTouchMove : true,
@@ -89,39 +85,48 @@ $(function() {
             disableOnInteraction: false,
         },
         pagination: {
-          el: '.slider_visual .swiper-pagination',      
+          el: '.slider_visual .swiper-pagination',
           type: 'fraction',
           clickable : true,
         },
     }); 
 
-    //////////// 최근본매장 
+    // 최근본매장 
     new Swiper('.slider_store', {
 				slidesPerView: 2.5,
         spaceBetween: 12,
         nested :true,
-        // loop: true,
-        // autoplay: {
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // },
     }); 
 
-    //////////// 프리미엄샵 
+    // 프리미엄샵 
     new Swiper('.slider_premium', {
-      slidesPerView: 1.5,
-      spaceBetween: 24,
-      //loop: true,
-      speed: 800,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      pagination: {
-        el: '.slider_premium .swiper-pagination',      
-        type: 'fraction',
-        clickable : true,
-      },
-  }); 
+        slidesPerView: 1.5,
+        spaceBetween: 24,
+        //loop: true,
+        speed: 800,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.slider_premium .swiper-pagination',
+          type: 'fraction',
+          clickable : true,
+        },
+    }); 
+
+    // 롤링배너 
+    new Swiper('.slider_banner', {
+        loop: true,
+        speed: 800,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.slider_banner .swiper-pagination',
+          clickable : true,
+        },
+    }); 
  
 });
