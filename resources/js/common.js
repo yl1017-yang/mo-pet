@@ -1,75 +1,4 @@
 $(function() {
-
-    //mobile var
-    var $moGnbWrap = $(".moGnbWrap"),
-    $moGnb = $(".moGnb", $moGnbWrap),
-    $moGnbLi = $(".moGnb > li", $moGnbWrap),
-    $moBtnOpen = $(".moBtnOpen"),
-    $moBtnClose = $(".moBtnClose"),
-    $moGnbBg = $(".moGnbBg");
-
-    //////////// 전체 햄버거 메뉴 ////////////
-    // 메뉴열기
-    $moGnbWrap.hide();
-    $moBtnOpen.on("click", function(e) {
-      e.preventDefault();
-
-      $(this).hide();
-      $moGnbWrap.fadeIn(200);
-      $moGnbWrap.find(".scroll").addClass("open");
-      $moGnbBg.fadeIn();
-      $("body").css({'height':$(window).height(), 'overflow':'hidden'});
-    });
-
-    // 메뉴닫기
-    $moBtnClose.on("click", function(e) {
-      e.preventDefault();
-      
-      $moBtnOpen.show();
-      $moGnbWrap.fadeOut(200);
-      $moGnbWrap.find(".scroll").removeClass("open");
-      $moGnbBg.hide();
-      $("body").css({'height':'auto', 'overflow':'auto'});
-    });	
-
-    $moGnbBg.on("click", function(e) {
-      e.preventDefault();
-      
-      $moBtnOpen.show();
-      $moGnbWrap.fadeOut(200);
-      $moGnbWrap.find(".scroll").removeClass("open");
-    });
-
-    // 모바일 - 1,2DEPTH 오픈
-    $moGnbLi.children("a").on("click", function(e) {
-    //$moGnbLi.find('> a').on('click', function(e) { //2차뎁스만 사용시
-      e.preventDefault();
-        
-        var $depth = $(this).next("ul");
-        if($depth.is(":visible")){
-            $(this).removeClass("on");
-            $depth.slideUp(300);
-        } else {
-            $moGnbLi.children("a").removeClass("on");
-            $(this).parent().siblings().find("ul").slideUp(300);
-            $(this).addClass("on");
-            $depth.slideDown(300);
-        }
-    });
-
-    $(".moGnb .depth1 > li").children("a").on('click', function() {
-        var $depth = $(this).next("ul");
-        if($depth.is(":visible")){
-            $(this).removeClass("on");
-            $depth.slideUp(300);
-        } else {
-            $(".moGnb .depth1 > li").children("a").removeClass("on");
-            $(this).parent().siblings().find("ul").slideUp(300);
-            $(this).addClass("on");
-            $depth.slideDown(300);
-        }
-    });
-
     // 메인비주얼
     new Swiper('.slider_visual', {
         effect: "fade",
@@ -125,11 +54,14 @@ $(function() {
             clickable : true,
         },
     }); 
+});
 
+
+$(function() {
     // 내주변 매장 포트폴리오
     $(".portfolio_wrap .portfolio_tab li").click(function() {
         $(".portfolio_wrap .portfolio_tab li").removeClass('on');
-        $(".portfolio_wrap .conBox").removeClass('on');
+        $(".portfolio_wrap .content").removeClass('on');
         $(this).addClass('on');
         $("#" + $(this).data('id')).addClass('on');
     });
@@ -151,8 +83,20 @@ $(function() {
         $("html, body").stop().animate({ scrollTop: 0 }, 400);
     });
 
-    $(window).on('load scroll', function(){
+    // 삭제 레이어팝업
+    $('.btn_del').on('click',function(e){
+        e.preventDefault();
+        $('.pop_wrap').addClass('active');
+        $("body").css({'height':$(window).height(), 'overflow':'hidden'});
+    });
+    $('.pop_wrap .btn_confirm').on('click', function(e){
+        e.preventDefault();
+        $(this).closest('.pop_wrap').removeClass('active');
+        $("body").css({'height':'auto', 'overflow':'auto'});
+    });
 
+    
+    $(window).on('load scroll', function(){
         //top 버튼
         //var btnOffset = $(".footer").offset().top;
         // if (scrollTop + $(window).height() < $(document).height()) {
@@ -164,10 +108,10 @@ $(function() {
         //상단 / 메인퀵메뉴 fixed
         var scrollTop = $(window).scrollTop();
         if (scrollTop >= 300) {
-            $('.header').addClass("fixed");
+            $('.main_header').addClass("fixed");
             $('.main_section_quickmenu').addClass("fixed");
         } else {
-            $('.header').removeClass("fixed");
+            $('.main_header').removeClass("fixed");
             $('.main_section_quickmenu').removeClass("fixed");
         }
 
@@ -228,11 +172,5 @@ $(function() {
         //     lastScrollTop = scrollTop;
         // }
 
-
-
-
     });
-    
-    
- 
 });
