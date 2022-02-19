@@ -188,17 +188,12 @@ body{min-height:100%;overflow-y:scroll;}
 .main_section_premium .slider_premium{
     position: relative;
     width:100%;
-    padding-bottom:11vw;
     display: flex;
-    /* margin:0 15px; */
+    padding:0 23vw 11vw 23vw;
 } 
 .slider_premium .swiper-slide {
     position:relative;
     display:flex;
-    border:1px solid red;
-    /* float: left;
-    width: calc((100% - 48px) / 3) !important;
-     */
 } 
 
 .slider_premium .swiper-slide a {

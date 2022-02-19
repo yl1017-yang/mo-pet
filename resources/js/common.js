@@ -1,6 +1,19 @@
 $(function() {
+
+    $(window).on('load', function(){
+        sliderVisual();
+        sliderStore();
+        sliderPremium();
+        sliderBanner();
+    });
+
+    $(window).on('resize', function(){
+        $(".swiper-wrapper").css("width", $(window).width());
+        //$(".swiper-wrapper").css("height", $(window).height());
+    });
+
     // 메인비주얼
-    new Swiper('.slider_visual', {
+    var sliderVisual = new Swiper('.slider_visual', {
         effect: "fade",
         allowTouchMove : true,
         loop: true,
@@ -14,21 +27,19 @@ $(function() {
             type: 'fraction',
             clickable : true,
         },
-    }); 
+    });
 
     // 최근본매장 
-    new Swiper('.slider_store', {
+    var sliderStore = new Swiper('.slider_store', {
 				slidesPerView: 2.5,
         spaceBetween: 12,
         nested :true,
     }); 
 
     // 프리미엄샵 
-    new Swiper('.slider_premium', {
-        slidesPerView: 1.25,
+    var sliderPremium = new Swiper('.slider_premium', {
 				spaceBetween: 24,
-				//loop: true,			
-			  watchOverflow: true,
+				loop: true,
         speed: 800,
         autoplay: {
             delay: 3000,
@@ -40,9 +51,10 @@ $(function() {
             clickable : true,
         },
     }); 
+    
 
     // 롤링배너 
-    new Swiper('.slider_banner', {
+    var sliderBanner = new Swiper('.slider_banner', {
         loop: true,
         speed: 800,
         autoplay: {
@@ -58,6 +70,11 @@ $(function() {
 
 
 $(function() {
+    var winST = window.pageYOffset;
+    $(window).on('resize', function(){
+      winST = window.pageYOffset;
+    });
+
     // 내주변 매장 포트폴리오
     $(".portfolio_wrap .portfolio_tab li").click(function() {
         $(".portfolio_wrap .portfolio_tab li").removeClass('on');
