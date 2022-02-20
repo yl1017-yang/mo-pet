@@ -36,6 +36,7 @@ $(function() {
         spaceBetween: 24,
         centeredSlides: true,
         loop: true,
+        loopAdditionalSlides: 24,
         speed: 800,
         autoplay: {
             delay: 2000,
