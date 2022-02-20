@@ -1,6 +1,7 @@
 @charset "utf-8";
 
 /* fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @font-face {
     font-family: 'Noto Sans KR';
     src: url("../../resources/fonts/NotoSansKR-Thin.woff2") format("woff2"), url("../../resources/fonts/NotoSansKR-Thin.woff") format("woff"), url("../../resources/fonts/NotoSansKR-Thin.ttf") format("truetype");

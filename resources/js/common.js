@@ -25,18 +25,20 @@ $(function() {
 
     // 메인 : 최근본매장 
     var sliderStore = new Swiper('.slider_store', {
-				slidesPerView: 2.5,
+		slidesPerView: 2.5,
         spaceBetween: 12,
         nested :true,
     }); 
 
     // 메인 : 프리미엄샵 
     var sliderPremium = new Swiper('.slider_premium', {
-				spaceBetween: 24,
-				loop: true,
+        slidesPerView: 1.8,
+        spaceBetween: 24,
+        centeredSlides: true,
+        loop: true,
         speed: 800,
         autoplay: {
-            delay: 3000,
+            delay: 2000,
             disableOnInteraction: false,
         },
         pagination: {

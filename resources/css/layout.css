@@ -1,12 +1,12 @@
 @charset "utf-8";
 
-/****************** Layout ******************/
+/****************** 레이아웃 ******************/
 html{font-size:16px;}
 body{min-height:100%;overflow-y:scroll;}
 .wrap{width:100%;min-width:280px;}
 .inner{margin:0 6.4vw}
 
-/****************** Header & GNB ******************/
+/****************** 상단 ******************/
 /* 메인헤더 */
 .main_header{position:absolute;top:0;left:0;width:100%;height:16vw;display:flex;align-content:center;flex-wrap:wrap;z-index:999;}
 .main_header.fixed{position:fixed;background:url("../../images/common/bg_header.png");background-size:contain;}
@@ -40,7 +40,7 @@ body{min-height:100%;overflow-y:scroll;}
 .header_quickmenu.fixed{display:block;position:fixed;justify-content:space-between;top:12vw;left:0;width:100%;background:#fff;}
 
 
-/****************** Footer ******************/
+/****************** 하단 ******************/
 .footer{padding:10.667vw 6.4vw 20vw 6.4vw;font-size:3.2vw;}
 .footer .ft_info{}
 .footer .ft_info .info_text{position:relative;font-size:3.733vw;font-weight:500;color:#1A1A1A;}
@@ -76,7 +76,8 @@ body{min-height:100%;overflow-y:scroll;}
 .toolbar .reservation:before{background:url("../../images/common/toolbar_Reservation.png") no-repeat 0 0/100%;}
 .toolbar .my:before{background:url("../../images/common/toolbar_my.png") no-repeat 0 0/100%;}
 
-/****************** Main Content ******************/
+/****************** 메인 내용 ******************/
+/* 메인타이틀 */
 .main .sect_title{position:relative;}
 .main .sect_title h2{font-size:6.4vw;color:#1A1A1A;font-weight:700;margin-bottom:8vw;}
 .main .sect_title .icon_arrow{display:block;position:absolute;top:0;right:0;width:10vw;height:8vw;}
@@ -106,7 +107,6 @@ body{min-height:100%;overflow-y:scroll;}
     object-fit:cover;
     z-index:0;
 } 
-/* 텍스트 */
 .slider_visual .swiper-slide .visual_text {
     position:absolute;
     top:22.333vw;
@@ -132,7 +132,6 @@ body{min-height:100%;overflow-y:scroll;}
     opacity: 1;
     transform: translateX(0);
 }
-
 .slider_visual .swiper-pagination {
     top:60.4vw;
     left:10.4vw;
@@ -195,18 +194,21 @@ body{min-height:100%;overflow-y:scroll;}
 } 
 
 /* 프리미엄샵 */
-.main_section_premium{background:rgba(255, 193, 7, .10);padding:13.333vw 0;}
+.main_section_premium{
+    background:rgba(255, 193, 7, .10);
+    padding:13.333vw 0;
+}
 .main_section_premium .slider_premium{
     position: relative;
     width:100%;
-    display: flex;
-    padding:0 23vw 11vw 23vw;
+    display:flex;
+    padding-bottom:11vw;
+    /* padding:0 23vw 11vw 23vw; */
 } 
 .slider_premium .swiper-slide {
     position:relative;
     display:flex;
-} 
-
+}
 .slider_premium .swiper-slide a {
     display: block;
     width: 100%;
@@ -310,14 +312,14 @@ body{min-height:100%;overflow-y:scroll;}
 .main_section_notice a:after{content:'';position:absolute;top:0;right:0;width:3.2vw;height:3.2vw;background:url("../../images/common/icon_arrow_01.png") no-repeat 0 0/100%;}
 .main_section_notice .noti_title{font-size:3.733vw;font-weight:700;color:#1A1A1A;margin-right:3.2vw;}
 
-/****************** Sub Content ******************/
+/****************** 서브 내용 ******************/
+/* 서브컨텐츠 */
 .sub_content{margin-top:16vw;}
 
 /* 최근본매장 */
 .sub_content .store_list{padding-top:10.667vw;}
 .sub_content .store_list li{margin-bottom:6.4vw;}
 .sub_content .store_list li a{display:flex;}
-
 .sub_content .store_list li .thumbimg{position:relative;width:32vw;height:32vw;margin-right:3.2vw;border-radius:8px;overflow:hidden;}
 .sub_content .store_list li .thumbimg img{width:100%;}
 .sub_content .store_list li .thumbimg .mark{position:absolute;top:0;right:0;padding:1.5vw 2.8vw;font-size:3.2vw;color:#fff;background:rgba(255, 193, 7, .8);text-align:center;border-top-right-radius:7px;border-bottom-left-radius:8px;}
@@ -329,7 +331,7 @@ body{min-height:100%;overflow-y:scroll;}
 .sub_content .store_list li .content_wrap .rate:before{content:'';position:absolute;top:0;left:0;width:4.8vw;height:4.8vw;background:url("../../images/common/icon_star.png") no-repeat 0 0/100%;}
 .sub_content .store_list li .content_wrap .btn_del{position:absolute;top:0;right:0;width:4.8vw;height:4.8vw;background:url("../../images/common/icon_close.png") no-repeat 0 0/100%;}
 
-/* 최근본매장 - 삭제 레이어팝업 */
+/* 최근본매장 - 레이어팝업:삭제 */
 .pop_wrap{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);opacity:0;visibility:hidden;z-index:-1;transition:opacity 200ms 200ms ease, transform 300ms 250ms ease}
 .pop_wrap.active{opacity:1;z-index:1998;visibility:visible;overflow:auto;-webkit-overflow-scrolling:touch;}
 .pop_wrap .pop_inner{width:100%;min-height:100%;display:flex;justify-content:center;align-items:center;box-sizing:border-box}
