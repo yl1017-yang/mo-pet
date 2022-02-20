@@ -117,7 +117,7 @@ $(function() {
 
         //top 버튼 스크롤
         if (scrollTop >= 200) {
-            $('.btn_top').fadeIn(200);
+            $('.btn_top').fadeIn(200).css({"display":"block"});
         } else {
             $('.btn_top').fadeOut(200);
         }
