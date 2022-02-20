@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /****************** 레이아웃 ******************/
-html{font-size:16px;}
+html{height:100%;font-size:16px;}
 body{min-height:100%;overflow-y:scroll;}
 .wrap{width:100%;min-width:280px;}
 .inner{margin:0 6.4vw}
@@ -17,7 +17,23 @@ body{min-height:100%;overflow-y:scroll;}
 .main_header .gnb .location:before{content:'';position:absolute;top:0;left:0;width:6.4vw;height:6.4vw;background:url("../../images/common/icon_map.png") no-repeat 0 0/100%;}
 .main_header .gnb .location .loca_tit{display:inline-block;color:#fff;font-size:4.267vw;font-weight:500;padding-left:6.8vw;margin-top:0.7vw;}
 .main_header .gnb .location .loca_arrow img{width:2.667vw;}
-.main_header .gnb .search{width:7.467vw;height:7.467vw;background:url("../../images/common/icon_search.png");background-size:100%;}
+
+/* 상단검색 */
+.main_header .gnb .search{width:7.467vw;height:7.467vw;background:url("../../images/common/icon_search.png") no-repeat 0 0/100%;}
+
+.search_btn_close{display:none;position:absolute;top:0;right:0;width:70px;height:60px;background:#fff;cursor:pointer;}
+.search_btn_close::before{content:'';width:24px;height:2px;position:absolute;left:26%;top:47%;opacity:1;background-color:#222;display:block;border-radius:10px;transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);-ms-transform:rotate(-45deg);}
+.search_btn_close::after{content:'';width:24px;height:2px;position:absolute;left:26%;top:47%;opacity:1;background-color:#222;display:block;border-radius:10px;transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);-ms-transform:rotate(45deg);}
+
+.search_wrap{display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:100;}
+.search_wrap .search_content{position:relative;width:100%;}
+.search_wrap .search_content .search_bar{display:flex;width:100%;height:18vw;padding:15vw 10vw 0 10vw;}
+.search_wrap .search_content .search_bar form{width:100%;}
+.search_wrap .search_content .search_bar .search_result{width:100%;height:18vw;padding-left:2vw;border-bottom:2px solid #444;}
+.search_wrap .search_content .search_bar .btn_allsearch{width:7.467vw;height:7.467vw;background:url("../../images/common/icon_search_02.png") no-repeat 0 0/100%;margin:5.5vw 0;}
+.search_wrap .search_content .search_text{position:relative;margin:25vw 10vw 0 10vw;}
+.search_wrap .search_content .search_text a{display:block;line-height:1.8;}
+.search_wrap .dim_bg{position:absolute;top:0;left:0;width:100vw;height:100vh;background:#fff;}
 
 /* 서브헤더 */
 .sub_header{position:fixed;top:0;left:0;width:100%;height:16vw;background:#fff;display:flex;align-content:center;flex-wrap:wrap;border-bottom:1px solid #EDEDED;z-index:100;}

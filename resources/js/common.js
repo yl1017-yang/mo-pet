@@ -66,6 +66,19 @@ $(function() {
 
 
 $(function() {
+    // 상단검색
+    $('.search').on('click', function() {
+        //$(this).hide();
+        $(".search_btn_close").show();
+        $(".search_wrap").fadeIn(300);
+        $("body").css({'height':$(window).height(), 'overflow':'hidden'});
+    });
+    $('.search_btn_close').on('click', function() {
+        $(".search").show();
+        $(".search_wrap").fadeOut(300);
+        $("body").css({'height':'auto', 'overflow':'auto'});
+    });
+
     // 메인 : 내주변 매장 포트폴리오 탭메뉴
     $(".portfolio_wrap .portfolio_tab li").click(function() {
         $(".portfolio_wrap .portfolio_tab li").removeClass('on');
