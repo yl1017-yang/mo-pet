@@ -131,6 +131,20 @@ $(function() {
         $("body").css({'height':'auto', 'overflow':'auto'});
     });
 
+    // 내주변 - 리스트보기 카테고리 클릭시 토스트배너 출력
+    $('.btn_category1').on('click', function() {
+        $(".category_box .btn_close").show();
+        $(".category_box").fadeIn(300);
+        $(".category_box").find('.category_content').animate({bottom:0}, 300);
+        $("body").css({'height':$(window).height(), 'overflow':'hidden'});
+    });
+    $('.category_box .btn_close').on('click', function() {
+        $(".btn_category1").show();
+        $(".category_box").fadeOut(300);
+        $(".category_box").find('.category_content').animate({bottom:-150}, 300);
+        $("body").css({'height':'auto', 'overflow':'auto'});
+    });
+
 
     var lastScrollTop = 0;
     
