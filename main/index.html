@@ -25,10 +25,24 @@
     <header class="main_header">
         <nav class="gnb">
             <div class="alert"><span class="blind">알림</span></div>
+            <!-- 위치지정 [D] 버튼클릭시 토스트배너 출력 -->
             <a href="#" class="location">
                 <span class="loca_tit">강남구 역삼동</span>
                 <span class="loca_arrow"><img src="../images/common/icon_down.png" alt="" /></span>
             </a>
+
+            <div class="location_box">
+                <div class="dim_bg"></div>
+                <div class="location_content">
+                    <a href="#" class="btn_close"><span class="blind">닫기</span></a>
+                    <p>내 위치 지정</p>
+                    <div class="loca_list">
+                        <a href="../sub/location.html" class="loca_my">현위치로 재검색</a>
+                        <a href="../sub/location.html" class="loca_map">지도로 위치지정</a>
+                    </div>
+                </div>
+            </div>
+            <!-- //위치지정 -->
             <!-- 검색 -->
             <button type="button" title="전체검색" class="search"><span class="blind">전체검색</span></button>
             <div class="search_wrap">
@@ -575,7 +589,8 @@
 
     <!-- 툴바 -->
     <div class="toolbar">
-		<a href="#"><span class="map">내주변</span></a>
+        <!-- [D] 활성화시 class on 추가  -->
+		<a href="../sub/local_list.html" class="on"><span class="map">내주변</span></a>
         <a href="#"><span class="portfolio">포트폴리오</span></a>
         <a href="#"><span class="home"></span></a>
         <a href="#"><span class="reservation">예약</span></a>

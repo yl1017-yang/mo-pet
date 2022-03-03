@@ -4,6 +4,7 @@ $(function() {
         sliderStore();
         sliderPremium();
         sliderBanner();
+        sliderCategory();
     });
 
     // 메인 : 비주얼
@@ -62,11 +63,18 @@ $(function() {
             clickable : true,
         },
     }); 
+
+    // 서브상단 : 내주변 카테고리
+    var sliderCategory = new Swiper('.local_category', {
+		slidesPerView: 3,
+        spaceBetween: 0,
+        nested :true,
+    }); 
 });
 
 
 $(function() {
-    // 상단검색
+    // 상단 - 검색
     $('.search').on('click', function() {
         //$(this).hide();
         $(".search_btn_close").show();
@@ -79,16 +87,29 @@ $(function() {
         $("body").css({'height':'auto', 'overflow':'auto'});
     });
 
+    // 상단 - 위치지정 클릭시 토스트배너 출력
+    $('.location').on('click', function() {
+        $(".location_box .btn_close").show();
+        $(".location_box").fadeIn(300);
+        $(".location_box").find('.location_content').animate({bottom:0}, 300);
+        $("body").css({'height':$(window).height(), 'overflow':'hidden'});
+    });
+    $('.location_box .btn_close').on('click', function() {
+        $(".location").show();
+        $(".location_box").fadeOut(300);
+        $(".location_box").find('.location_content').animate({bottom:-150}, 300);
+        $("body").css({'height':'auto', 'overflow':'auto'});
+    });
+
     // 메인 : 내주변 매장 포트폴리오 탭메뉴
     $(".portfolio_wrap .portfolio_tab li").click(function() {
         $(".portfolio_wrap .portfolio_tab li").removeClass('on');
         $(".portfolio_wrap .content").removeClass('on');
         $(this).addClass('on');
         $("#" + $(this).data('id')).addClass('on');
-        //$($(this).attr("href")).addClass('on');
     });
 
-    // 하단 정보 출력
+    // 하단 정보 토글메뉴
     $('.ft_info .info_text').on('click',function(e) {
         e.preventDefault();
         if ($(this).parent().hasClass('on')) {
@@ -109,6 +130,7 @@ $(function() {
         $(this).closest('.pop_wrap').removeClass('active');
         $("body").css({'height':'auto', 'overflow':'auto'});
     });
+
 
     var lastScrollTop = 0;
     
