@@ -97,14 +97,14 @@ body{height:100%;overflow-y:scroll;}
 .toolbar a{position:relative;display:block;width:25%;text-align:center;font-size:2.667vw;color:#1A1A1A;}
 .toolbar a span{display:block;padding-top:9.6vw;}
 .toolbar a span:before{content:'';position:absolute;top:2.133vw;left:50%;transform:translate(-50%, 0);width:7.467vw;height:7.467vw;}
-.toolbar .map:before{background:url("../../images/common/toolbar_my.png") no-repeat 0 0/100%;}
+.toolbar .map:before{background:url("../../images/common/toolbar_map.png") no-repeat 0 0/100%;}
 .toolbar .portfolio:before{background:url("../../images/common/toolbar_portfolio.png") no-repeat 0 0/100%;}
 .toolbar .home:before{background:url("../../images/common/toolbar_home.png") no-repeat 0 0/100%;}
 .toolbar .reservation:before{background:url("../../images/common/toolbar_Reservation.png") no-repeat 0 0/100%;}
 .toolbar .my:before{background:url("../../images/common/toolbar_my.png") no-repeat 0 0/100%;}
 
 .toolbar a.on span{color:#FF781E;}
-.toolbar a.on .map:before{background:url("../../images/common/toolbar_my_on.png") no-repeat 0 0/100%;}
+.toolbar a.on .map:before{background:url("../../images/common/toolbar_map_on.png") no-repeat 0 0/100%;}
 .toolbar a.on .portfolio:before{background:url("../../images/common/toolbar_portfolio_on.png") no-repeat 0 0/100%;}
 .toolbar a.on .reservation:before{background:url("../../images/common/toolbar_Reservation_on.png") no-repeat 0 0/100%;}
 .toolbar a.on .my:before{background:url("../../images/common/toolbar_my_on.png") no-repeat 0 0/100%;}
