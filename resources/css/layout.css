@@ -364,7 +364,7 @@ body{height:100%;overflow-y:scroll;}
 .sub_content .store_list li .content_wrap .rate:before{content:'';position:absolute;top:0;left:0;width:4.8vw;height:4.8vw;background:url("../../images/common/icon_star.png") no-repeat 0 0/100%;}
 .sub_content .store_list li .content_wrap .btn_del{position:absolute;top:0;right:0;width:4.8vw;height:4.8vw;background:url("../../images/common/icon_close.png") no-repeat 0 0/100%;}
 
-/* 최근본매장 - 레이어팝업:삭제 */
+/* 최근본매장, 내주변 지도로 보기 - 레이어팝업 */
 .pop_wrap{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);opacity:0;visibility:hidden;z-index:-1;transition:opacity 200ms 200ms ease, transform 300ms 250ms ease}
 .pop_wrap.active{opacity:1;z-index:1998;visibility:visible;overflow:auto;-webkit-overflow-scrolling:touch;}
 .pop_wrap .pop_inner{width:100%;min-height:100%;display:flex;justify-content:center;align-items:center;box-sizing:border-box}
@@ -373,6 +373,7 @@ body{height:100%;overflow-y:scroll;}
 .pop_wrap .btn_wrap{display:flex;justify-content:center;margin-top:3vw;}
 .pop_wrap .btn_wrap .btn_cancle{display:block;width:38vw;padding:3.6vw 0;margin-right:2vw;background:#F0F0F0;color:#1A1A1A;border-radius:8px;}
 .pop_wrap .btn_wrap .btn_confirm{display:block;width:38vw;padding:3.6vw 0;background:#FF781E;color:#fff;border-radius:8px;}
+.pop_wrap .btn_wrap .btn_confirm.type2{width:96%;padding:3.6vw 0;}
 
 /* 위치지정 */
 .location_warp{position:relative;height:100%;}
@@ -472,72 +473,18 @@ body{height:100%;overflow-y:scroll;}
 .map_warp #daumRoughmapContainer1646313246227{width:100vw !important;min-height:100% !important;}
 
 /* 내주변 - 지도보기 : 리스트 */
-.map_warp .slider_map_list{
-    position: absolute;
-    bottom: 25vw;
-    left: 0;
-    width:100%;
-    display:flex;
-    z-index:10;
-    border:1px solid red
-} 
-.slider_map_list .swiper-slide {
-    position:relative;
-    display:flex;
-}
-.slider_map_list .swiper-slide a {
-    display: block;
-    width: 100%;
-    background:#fff;
-    border-radius:8px;
-    overflow:hidden;
-    box-shadow:0px 5px 10px 0px rgba(0,0,0,0.08);
-}
-.slider_map_list .swiper-slide .thumbimg {
-    position:relative;
-    width:100%;
-}
-.slider_map_list .swiper-slide .thumbimg img {
-    width:100%;
-}
-.slider_map_list .swiper-slide .thumbimg .text {
-    position:absolute;
-    bottom:0;
-    left:0;
-    width:100%;
-    background:rgba(0, 0, 0, .15);
-    padding:2.5vw 5.333vw 2vw 5.333vw;
-    font-size:3.733vw;
-    color:#fff;
-} 
-.slider_map_list .swiper-slide .text_wrap {
-    padding:5.333vw;
-}
-.slider_map_list .swiper-slide .text_wrap .title {
-    font-size:4.8vw;
-    font-weight:700;
-    color:#1A1A1A;
-    min-height:15vw;
-}
-.slider_map_list .swiper-slide .text_wrap .desc {
-    font-size:3.733vw;
-    color:#666;
-    margin:1vw 0 1.6vw 0;
-} 
-.slider_map_list .swiper-slide .text_wrap .rate {
-    position:relative;
-    font-size:3.733vw;
-    font-weight:500;
-    color:#666;
-    padding-left:5.5vw;
-} 
-.slider_map_list .swiper-slide .text_wrap .rate:before {
-    content:'';position:absolute;top:0;left:0;width:4.8vw;height:4.8vw;background:url("../../images/common/icon_star.png") no-repeat 0 0/100%;
-}
-.slider_map_list .swiper-slide .text_wrap .rate .rate_all {
-    color:#333;
-    font-weight:600;
-}
+.map_warp .slider_map_list{position:absolute;bottom:26vw;left:0;width:100%;display:flex;z-index:50;} 
+.slider_map_list .swiper-slide {position:relative;display:flex;}
+.slider_map_list .swiper-slide a {display:flex;width:100%;background:#fff;border-radius:8px;overflow:hidden;padding:5.333vw;box-shadow:0px 7px 15px 0px rgba(0,0,0,0.09);}
+.slider_map_list .swiper-slide .thumbimg{position:relative;width:32vw;height:32vw;margin-right:3.2vw;border-radius:8px;overflow:hidden;}
+.slider_map_list .swiper-slide .thumbimg img{width:100%;}
+.slider_map_list .swiper-slide .thumbimg .mark{position:absolute;top:0;right:0;padding:1.5vw 2.8vw;font-size:3.2vw;color:#fff;background:rgba(255, 193, 7, .8);text-align:center;border-top-right-radius:7px;border-bottom-left-radius:8px;}
+.slider_map_list .swiper-slide .content_wrap{position:relative;}
+.slider_map_list .swiper-slide .content_wrap .category{display:inline-block;font-size:2.667vw;color:#333;border:1px solid #666;border-radius:20px;padding:1.333vw 3.2vw;margin-bottom:3.3vw;}
+.slider_map_list .swiper-slide .content_wrap .title{font-size:4.267vw;font-weight:700;color:#1A1A1A;margin-bottom:0.5vw;}
+.slider_map_list .swiper-slide .content_wrap .address{font-size:3.733vw;}
+.slider_map_list .swiper-slide .content_wrap .rate{position:relative;font-size:3.733vw;font-weight:600;color:#666;padding-left:5.5vw;margin-top:1.6vw;}
+.slider_map_list .swiper-slide .content_wrap .rate:before{content:'';position:absolute;top:0;left:0;width:4.8vw;height:4.8vw;background:url("../../images/common/icon_star.png") no-repeat 0 0/100%;}
 
 /* 내주변 - 지도보기 : 위치정보 설정하기 */
 .map_setting_warp{height:100vh;margin:-16vw 0;display:flex;align-content:center;flex-wrap:wrap;justify-content:center;text-align:center;flex-direction: column;}

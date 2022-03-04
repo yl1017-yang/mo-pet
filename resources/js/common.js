@@ -73,14 +73,14 @@ $(function() {
 
     // 서브 : 내주변 - 지도보기 리스트
     var sliderPremium = new Swiper('.slider_map_list', {
-        slidesPerView: 1.8,
-        spaceBetween: 24,
+        slidesPerView: 1.2,
+        spaceBetween: 12,
         centeredSlides: true,
         loop: true,
-        loopAdditionalSlides: 24,
+        loopAdditionalSlides: 12,
         speed: 800,
         autoplay: {
-            delay: 2000,
+            delay: 3000,
             disableOnInteraction: false,
         },
     }); 
