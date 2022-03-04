@@ -70,6 +70,20 @@ $(function() {
         spaceBetween: 0,
         nested :true,
     }); 
+
+    // 서브 : 내주변 - 지도보기 리스트
+    var sliderPremium = new Swiper('.slider_map_list', {
+        slidesPerView: 1.8,
+        spaceBetween: 24,
+        centeredSlides: true,
+        loop: true,
+        loopAdditionalSlides: 24,
+        speed: 800,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+    }); 
 });
 
 
