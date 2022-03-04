@@ -74,6 +74,7 @@ input[disabled], select[disabled], input[readonly], textarea[disabled], button[d
 input, textarea{ -webkit-tap-highlight-color:rgba(0, 0, 0, 0) }
 select{vertical-align:middle; -webkit-appearance:none; -moz-appearance:none; appearance:none; border-radius:0; outline:none; }
 select::-ms-expand {display:none;}
+input[type="radio"], input[type="checkbox"] {position: absolute;width: 1px;height: 1px;margin: -1px;border: 0;overflow: hidden;padding: 0;clip: rect(0,0,0,0);-webkit-appearance: none;}
 
 /* placeholder, focus */
 ::-webkit-input-placeholder{font-weight:300;color:#767676;opacity:1}
