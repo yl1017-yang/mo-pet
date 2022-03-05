@@ -36,15 +36,16 @@
                 <!-- 검색 -->
                 <div class="add_search">
                     <form id="totalSearchForm" name="search" method="post"></form>
-                        <button type="button" id="totalSearch" title="전체검색" class="btn_allsearch" onclick="javascript:totalSearch();"><span class="blind">전체검색</span></button>
+                        <button type="button" id="totalSearch" title="전체검색" class="btn_allsearch"><span class="blind">전체검색</span></button>
                         <fieldset>
                             <legend>주소검색 폼</legend>
-                            <input type="text" name="s" value="" title="(예) 강남구, 역삼동, 역삼로 222" placeholder="(예) 강남구, 역삼동, 역삼로 222" class="search_result">
-                            <div class="btn_cancle"><span class="blind">취소</span></div>
+                            <input type="text" id="text_add" class="blind">
+                            <input type="text" name="s" value="" title="(예) 강남구, 역삼동, 역삼로 222" placeholder="(예) 강남구, 역삼동, 역삼로 222" class="search_result">                            
+                            <button type="button" title="취소" class="btn_cancle"><span class="blind">취소</span></button>
                         </fieldset>
                     </form>
                 </div>
-                <!-- 검색 -->
+                <!-- //검색 -->
             </div>
         </section>
         <!-- //주소검색 -->
@@ -57,9 +58,18 @@
                     <button type="button" title="전체삭제" class="btn_alldel">전체삭제</button>
                 </div>
                 <ul class="recently_list">
-                    <li>서울 <div class="btn_delete"><span class="blind">삭제</span></div></li>
-                    <li>서울 강남구 <div class="btn_delete"><span class="blind">삭제</span></div></li>
-                    <li>서울 강남구 역삼동 <div class="btn_delete"><span class="blind">삭제</span></div></li>
+                    <li>
+                        서울 
+                        <button type="button" title="삭제" class="btn_delete"><span class="blind">삭제</span></button>
+                    </li>
+                    <li>
+                        서울 강남구 
+                        <button type="button" title="삭제" class="btn_delete"><span class="blind">삭제</span></button>
+                    </li>
+                    <li>
+                        서울 강남구 역삼동 
+                        <button type="button" title="삭제" class="btn_delete"><span class="blind">삭제</span></button>
+                    </li>
                 </ul>
             </div>
         </section>

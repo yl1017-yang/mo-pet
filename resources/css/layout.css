@@ -347,7 +347,7 @@ body{height:100%;overflow-y:scroll;}
 
 /****************** 서브 내용 ******************/
 /* 서브컨텐츠 */
-.sub_content{margin-top:16vw;min-height:100%;}
+.sub_content{padding-top:16vw;min-height:100%;} /* 세로 100% - 상단패딩 16vw */
 
 /* 최근본매장 */
 .sub_content .store_list{padding-top:10.667vw;}
@@ -376,13 +376,15 @@ body{height:100%;overflow-y:scroll;}
 .pop_wrap .btn_wrap .btn_confirm.type2{width:96%;padding:3.6vw 0;}
 
 /* 위치지정 */
-.location_warp{position:relative;height:100%;}
-.location_warp .add_search{position:absolute;top:6.4vw;left:6.4vw;right:6.4vw;height:12.8vw;background:#fff;box-shadow:5px 10px 11px 0px rgba(0,0,0,.07);border-radius:4px;z-index:999;display:flex;align-items:center;}
+.location_warp{position:relative;}
+.location_warp .add_search{position:absolute;top:22.4vw;left:6.4vw;right:6.4vw;height:12.8vw;background:#fff;box-shadow:5px 10px 11px 0px rgba(0,0,0,.07);border-radius:4px;z-index:10;display:flex;align-items:center;}
 .location_warp .add_search form{}
 .location_warp .add_search .search_result{width:100%;}
 .location_warp .add_search .btn_allsearch{width:5.333vw;height:5.333vw;font-size:3.733vw;margin:0 1.6vw 0 3.2vw;background:url("../../images/common/icon_search_02.png") no-repeat 0 0/100%;}
-.location_warp .btn_setting_end{position:absolute;bottom:26vw;left:6.4vw;right:6.4vw;min-height:13.867vw;background:#FF781E;color:#fff;border-radius:8px;font-size:4.267vw;z-index:999;}
-.location_warp #daumRoughmapContainer1646313246227{width:100vw !important;height:100vh !important;}
+.location_warp .btn_setting_end{position:absolute;bottom:10.667vw;left:6.4vw;right:6.4vw;min-height:13.867vw;background:#FF781E;color:#fff;border-radius:8px;font-size:4.267vw;z-index:10;}
+.location_warp .location_my{position:absolute;bottom:30.667vw;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.7);color:#fff;border-radius:100px;padding:1.8vw 3.6vw;z-index:10;}
+.location_warp #daumRoughmapContainer1646313246227{width:100vw !important;height:100vh !important;margin-top:-16vw;}
+.location_warp #daumRoughmapContainer1646313246227 .wrap_map{height:100vh !important;}
 
 /* 위치지정 - 토스트팝업(메인) */
 .location_box{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:999;}
@@ -398,7 +400,7 @@ body{height:100%;overflow-y:scroll;}
 .address_search_wrap{background:#fafafa;padding:8vw 0;}
 .address_search_wrap .text{font-size:4.8vw;color:#1A1A1A;padding-bottom:6.4vw;}
 .address_search_wrap .add_search{position:relative;height:12.8vw;background:#fff;border:1px solid #333;border-radius:4px;display:flex;align-items:center;}
-.address_search_wrap .add_search form{}
+.address_search_wrap .add_search fieldset{width:100%;}
 .address_search_wrap .add_search .search_result{width:100%;}
 .address_search_wrap .add_search .btn_allsearch{width:5.333vw;height:5.333vw;font-size:3.733vw;margin:0 1.6vw 0 3.2vw;background:url("../../images/common/icon_search_02.png") no-repeat 0 0/100%;}
 .address_search_wrap .add_search .btn_cancle{position:absolute;top:3.8vw;right:3.2vw;width:4.8vw;height:4.8vw;background:url("../../images/common/icon_close.png") no-repeat 0 0/100%;}
@@ -470,7 +472,9 @@ body{height:100%;overflow-y:scroll;}
 .sub_content .local_list_result{height:100vh;margin:-16vw 0;display:flex;align-content:center;flex-wrap:wrap;justify-content:center;text-align:center;}
 
 /* 내주변 - 지도보기 */
-.map_warp #daumRoughmapContainer1646313246227{width:100vw !important;min-height:100% !important;}
+.map_warp{}
+.map_warp #daumRoughmapContainer1646313246227{width:100vw !important;height:100vh !important;margin-top:-16vw;}
+.map_warp #daumRoughmapContainer1646313246227 .wrap_map{height:100vh !important;}
 
 /* 내주변 - 지도보기 : 리스트 */
 .map_warp .slider_map_list{position:absolute;bottom:26vw;left:0;width:100%;display:flex;z-index:50;} 

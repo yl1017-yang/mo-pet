@@ -104,8 +104,8 @@ $(function() {
     // 상단 - 위치지정 클릭시 토스트배너 출력
     $('.location').on('click', function() {
         $(".location_box .btn_close").show();
-        $(".location_box").fadeIn(300);
-        $(".location_box").find('.location_content').animate({bottom:0}, 300);
+        $(".location_box").fadeIn(200);
+        $(".location_box").find('.location_content').animate({bottom:0}, 200);
         $("body").css({'height':$(window).height(), 'overflow':'hidden'});
     });
     $('.location_box .btn_close').on('click', function() {
@@ -127,9 +127,9 @@ $(function() {
     $('.ft_info .info_text').on('click',function(e) {
         e.preventDefault();
         if ($(this).parent().hasClass('on')) {
-            $(this).parent().removeClass('on').find('.info_con').slideUp(400);
+            $(this).parent().removeClass('on').find('.info_con').slideUp(300);
         } else {
-            $(this).parent().addClass('on').find('.info_con').slideDown(400);
+            $(this).parent().addClass('on').find('.info_con').slideDown(300);
         }
     });
 
@@ -148,15 +148,25 @@ $(function() {
     // 내주변 - 카테고리 클릭시 토스트배너 출력
     $('.btn_cate').on('click', function() {
         $(".category_box .btn_close").show();
-        $(".category_box" + $(this).attr("href")).fadeIn(300);
-        $(".category_box").find('.category_content').animate({bottom:0}, 300);
+        $(".category_box" + $(this).attr("href")).fadeIn(200);
+        //$(".category_box" + $(this).attr("href")).css({'display':'block'});
+        $(".category_box").find('.category_content').animate({bottom:0}, 200);
         $("body").css({'height':$(window).height(), 'overflow':'hidden'});
     });
     $('.category_box .btn_close').on('click', function() {
         $(".btn_cate").show();
         $(".category_box").fadeOut(300);
+        //$(".category_box").css({'display':'none'});
         $(".category_box").find('.category_content').animate({bottom:-150}, 300);
         $("body").css({'height':'auto', 'overflow':'auto'});
+    });
+
+    // 주소검색 - 삭제,전체삭제
+    $('.recently_search_wrap .btn_alldel').on('click', function() {
+        $(".recently_search_wrap").children().remove();
+    });
+    $('.recently_search_wrap .btn_delete').on('click', function() {
+        $(this).parent().remove();
     });
 
 
