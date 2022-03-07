@@ -381,6 +381,7 @@ body{height:100%;overflow-y:scroll;}
 .location_warp .add_search form{}
 .location_warp .add_search .search_result{width:100%;}
 .location_warp .add_search .btn_allsearch{width:5.333vw;height:5.333vw;font-size:3.733vw;margin:0 1.6vw 0 3.2vw;background:url("../../images/common/icon_search_02.png") no-repeat 0 0/100%;}
+.location_warp .add_search .btn_cancle{display:block;width:38vw;padding:3.6vw 0;margin-right:2vw;background:#F0F0F0;color:#1A1A1A;border-radius:8px;}
 .location_warp .btn_setting_end{position:absolute;bottom:10.667vw;left:6.4vw;right:6.4vw;min-height:13.867vw;background:#FF781E;color:#fff;border-radius:8px;font-size:4.267vw;z-index:10;}
 .location_warp .location_my{position:absolute;bottom:30.667vw;left:50%;transform:translateX(-50%);background:rgba(0,0,0,0.7);color:#fff;border-radius:100px;padding:1.8vw 3.6vw;z-index:10;}
 .location_warp #daumRoughmapContainer1646313246227{width:100vw !important;height:100vh !important;margin-top:-16vw;}

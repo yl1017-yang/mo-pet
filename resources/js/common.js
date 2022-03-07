@@ -161,6 +161,20 @@ $(function() {
         $("body").css({'height':'auto', 'overflow':'auto'});
     });
 
+    // 주소검색 - 검색 취소
+    var $search = $('.add_search .search_result');
+    var $clearIpt = $('.add_search .btn_cancle');
+
+    $search.keyup(function(){
+    $(".add_search .btn_cancle").toggle(Boolean($(this).val()));
+    });
+
+    $clearIpt.toggle(Boolean($search.val()));
+    $clearIpt.click(function(){
+    $(".add_search .search_result").val('').focus();
+    $(this).hide();
+    });
+
     // 주소검색 - 삭제,전체삭제
     $('.recently_search_wrap .btn_alldel').on('click', function() {
         $(".recently_search_wrap").children().remove();
